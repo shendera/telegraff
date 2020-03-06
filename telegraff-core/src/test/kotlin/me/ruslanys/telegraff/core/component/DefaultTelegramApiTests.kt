@@ -192,7 +192,7 @@ class DefaultTelegramApiTests {
 
         @Bean
         fun telegramApi(restTemplateBuilder: RestTemplateBuilder): TelegramApi {
-            return DefaultTelegramApi("key", restTemplateBuilder)
+            return DefaultTelegramApi("https://api.telegram.org","key", restTemplateBuilder)
         }
 
     }

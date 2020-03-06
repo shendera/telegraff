@@ -9,6 +9,11 @@ import java.util.*
 class TelegramProperties {
 
     /**
+     * Telegram API root, replace it in the application properties to bypass Telegram RKN ban.
+     */
+    var apiRoot: String = "https://api.telegram.org"
+
+    /**
      * Telegram Bot API Access Key.
      */
     var accessKey: String = ""

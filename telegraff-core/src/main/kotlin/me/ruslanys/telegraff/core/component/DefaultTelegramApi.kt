@@ -14,10 +14,10 @@ import org.springframework.http.HttpMethod
 import org.springframework.http.MediaType
 import org.springframework.util.LinkedMultiValueMap
 
-class DefaultTelegramApi(telegramAccessKey: String, restTemplateBuilder: RestTemplateBuilder) : TelegramApi {
+class DefaultTelegramApi(telegramApiRoot: String, telegramAccessKey: String, restTemplateBuilder: RestTemplateBuilder) : TelegramApi {
 
     private val restTemplate = restTemplateBuilder
-            .rootUri("http://212.109.199.212/OVBl90vWhQ0Q7h5EY8pC/bot$telegramAccessKey")
+            .rootUri("$telegramApiRoot/bot$telegramAccessKey")
             .build()
 
     override fun getMe(): TelegramUser {
