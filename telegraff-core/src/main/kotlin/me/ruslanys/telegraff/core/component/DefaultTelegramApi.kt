@@ -17,7 +17,7 @@ import org.springframework.util.LinkedMultiValueMap
 class DefaultTelegramApi(telegramAccessKey: String, restTemplateBuilder: RestTemplateBuilder) : TelegramApi {
 
     private val restTemplate = restTemplateBuilder
-            .rootUri("https://api.telegram.org/bot$telegramAccessKey")
+            .rootUri("http://212.109.199.212/OVBl90vWhQ0Q7h5EY8pC/bot$telegramAccessKey")
             .build()
 
     override fun getMe(): TelegramUser {
